@@ -1,0 +1,234 @@
+.contact-section {
+    background-image: url('../images/QA\ .jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Эффект параллакса */
+    padding: 80px 20px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+/* Добавляем затемняющий overlay */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Настройте прозрачность */
+    z-index: 1;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.contact-section .button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.contact-section .button:hover {
+    background-color: white;
+    color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Добавляем анимацию появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-section .button {
+    animation: fadeInUp 1s ease-out;
+}
+
+.contact-section p {
+    animation-delay: 0.2s;
+}
+
+.contact-section .button {
+    animation-delay: 0.4s;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-section p {
+        font-size: 1em;
+    }
+
+    .contact-section .button {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+/* Добавьте в head для подключения иконок Font Awesome */
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+/* Стили для контейнера кнопок */
+.social-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Общие стили для всех кнопок */
+.button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    color: white;
+    gap: 10px;
+}
+
+.button i {
+    font-size: 1.2em;
+}
+
+/* Специфичные стили для каждой кнопки */
+.email-button {
+    background-color: #ff4d4d;
+    border-color: #ff4d4d;
+}
+
+.email-button:hover {
+    background-color: #ff3333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
+}
+
+.telegram-button {
+    background-color: #0088cc;
+    border-color: #0088cc;
+}
+
+.telegram-button:hover {
+    background-color: #0077b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3);
+}
+
+.github-button {
+    background-color: #333;
+    border-color: #333;
+}
+
+.github-button:hover {
+    background-color: #262626;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(51, 51, 51, 0.3);
+}
+
+/* Добавляем анимацию появления */
+@keyframes buttonPop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.button {
+    animation: buttonPop 0.5s ease-out forwards;
+}
+
+.email-button {
+    animation-delay: 0s;
+}
+
+.telegram-button {
+    animation-delay: 0.2s;
+}
+
+.github-button {
+    animation-delay: 0.4s;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+}
+
+/* Добавляем эффект пульсации при наведении */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button:hover {
+    animation: pulse 1s infinite;
+}
+
+/* Добавляем эффект нажатия */
+.button:active {
+    transform: scale(0.95);
+}
