@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://ваш-сайт.ru/sitemap.xml
+Sitemap: https://evgenkalin39.github.io/sitemap.xml
 
 # Запрещаем индексацию служебных файлов
 Disallow: /css/
