@@ -1,0 +1,118 @@
+/* Контейнер секции */
+.tools-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* Основной заголовок секции */
+.tools-section h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Заголовки категорий */
+.tools-category {
+    color: #4B5563;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(1rem, 2vw, 1.5rem);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Сетка инструментов */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 20vw, 200px), 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Карточка инструмента */
+.tool-item {
+    background: white;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Иконки */
+.tool-item i {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+    color: #6B7280;
+}
+
+/* Название инструмента */
+.tool-name {
+    display: block;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #6B7280;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    line-height: 1.4;
+}
+
+/* Эффекты при наведении */
+.tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.tool-item:hover i,
+.tool-item:hover .tool-name {
+    color: #374151;
+}
+
+/* Адаптивность для разных экранов */
+@media (max-width: 1200px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-section {
+        padding: 1rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .tool-item {
+        padding: 1rem;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.5rem;
+    }
+    
+    .tool-item {
+        padding: 0.75rem;
+    }
+    
+    .tool-name {
+        font-size: 0.9rem;
+    }
+    
+    .tool-item i {
+        font-size: 1.25rem;
+    }
+}
+
+/* Обеспечение плавности при изменении размеров */
+@media (prefers-reduced-motion: no-preference) {
+    .tools-section * {
+        transition: all 0.3s ease-in-out;
+    }
+}

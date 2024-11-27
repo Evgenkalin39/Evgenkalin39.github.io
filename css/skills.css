@@ -1,0 +1,67 @@
+/* Секция навыков */
+.skills-section {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Расстояние между изображением и текстом */
+}
+
+.profile-photo {
+    width: 100px; /* Размер изображения */
+    height: 100px;
+    border-radius: 50%; /* Делает изображение круглым */
+    object-fit: cover; /* Убедиться, что изображение вписывается */
+    border: 2px solid #ccc; /* Опционально: рамка */
+}
+
+.skill-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card--active {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
