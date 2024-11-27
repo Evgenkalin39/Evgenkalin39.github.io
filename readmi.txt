@@ -1,29 +1,29 @@
 Давайте разобьём код на отдельные простые файлы, чтобы их было легко редактировать и поддерживать.
-Структура файлов сайта-визитки QA инженераClick to open code
+Структура файлов сайта-визитки QA инженера
 
 Сначала создайте файл index.html:
 
-index.html - Основная структураClick to open code
+index.html - Основная структура
 
 Файл css/main.css с базовыми стилями:
 
-main.css - Основные стилиClick to open code
+main.css - Основные стили
 
 Файл css/header.css:
 
-header.css - Стили шапкиClick to open code
+header.css - Стили шапки
 
 Файл css/skills.css:
 
-skills.css - Стили секции навыковClick to open code
+skills.css - Стили секции
 
 Файл css/tools.css:
 
-tools.css - Стили секции инструментовClick to open code
+tools.css - Стили секции инструментов
 
 Файл css/contact.css:
 
-contact.css - Стили контактной секцииClick to open code
+contact.css - Стили контактной секции
 Как использовать эти файлы:
 
 Создайте на компьютере папку qa-portfolio
