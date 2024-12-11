@@ -63,3 +63,35 @@ h2 {
     object-fit: cover; /* Убедиться, что изображение вписывается */
     border: 2px solid #ccc; /* Опционально: рамка */
 }
+
+/* Оптимизация загрузки шрифтов */
+@font-face {
+    font-family: 'CustomFont';
+    font-display: swap;
+    src: local('CustomFont'),
+         url('/fonts/CustomFont.woff2') format('woff2'),
+         url('/fonts/CustomFont.woff') format('woff');
+}
+/* Добавить поддержку системных тем */
+:root {
+    color-scheme: light dark;
+    
+    /* Переменные для светлой темы */
+    --bg-primary: #ffffff;
+    --text-primary: #1f2937;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1f2937;
+        --text-primary: #f3f4f6;
+        --card-shadow: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Использовать transform вместо позиционирования */
+.tool-description {
+    transform: translate(-50%, -10px) translateZ(0);
+    will-change: transform, opacity;
+}
