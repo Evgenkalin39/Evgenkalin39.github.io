@@ -65,3 +65,21 @@
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+
+.skills-list {
+    list-style: none;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.skills-list li {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.skills-list li:before {
+    content: "•";
+    position: absolute;
+    left: -1rem;
+    color: var(--primary-color);
+}

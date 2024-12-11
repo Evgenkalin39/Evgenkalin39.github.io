@@ -116,3 +116,230 @@
         transition: all 0.3s ease-in-out;
     }
 }
+
+/* Обновляем позиционирование для всей секции инструментов */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    position: relative;
+ }
+ 
+ /* Стили для карточек инструментов */
+ .tool-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+ }
+ 
+ /* При наведении поднимаем z-index карточки */
+ .tool-item:hover {
+    z-index: 100;
+    transform: translateY(-5px);
+ }
+ 
+ /* Стили для всплывающего описания */
+ .tool-description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+ }
+ 
+ /* Позиционирование описания сверху */
+ .tool-description.top {
+    bottom: calc(100% + 15px);
+ }
+ 
+ /* Позиционирование описания снизу */
+ .tool-description.bottom {
+    top: calc(100% + 15px);
+ }
+ 
+ /* Стрелка для верхнего положения */
+ .tool-description.top::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #1d4ed8;
+ }
+ 
+ /* Стрелка для нижнего положения */
+ .tool-description.bottom::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #2563eb;
+ }
+ 
+ /* Показываем описание при наведении */
+ .tool-item:hover .tool-description {
+    opacity: 1;
+    visibility: visible;
+ }
+ 
+ /* Стили для списка в описании */
+ .tool-description ul {
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+ }
+ 
+ .tool-description li {
+    margin-bottom: 5px;
+ }
+ 
+ /* Заголовок в описании */
+ .tool-description strong {
+    display: block;
+    color: #fef3c7;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+ }
+ 
+ /* Медиа-запросы для адаптивности */
+ @media (max-width: 768px) {
+    .tool-description {
+        width: 200px;
+        font-size: 14px;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+ }
+
+
+ /* Стили для всплывающего описания */
+.tool-description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+    z-index: 1000;
+}
+
+/* Заголовок описания */
+.tool-description strong {
+    display: block;
+    color: #fef3c7;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Стили для списка */
+.tool-description ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.tool-description li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.4;
+    font-size: 0.95em;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Маркеры списка */
+.tool-description li::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: #fef3c7;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Позиционирование описания сверху и снизу */
+.tool-description.top {
+    bottom: calc(100% + 15px);
+}
+
+.tool-description.bottom {
+    top: calc(100% + 15px);
+}
+
+/* Стрелки для верхнего и нижнего положения */
+.tool-description.top::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #1d4ed8;
+}
+
+.tool-description.bottom::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #2563eb;
+}
+
+/* Адаптивность описания */
+@media (max-width: 768px) {
+    .tool-description {
+        width: 240px;
+        padding: 12px 16px;
+    }
+    
+    .tool-description strong {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    
+    .tool-description li {
+        font-size: 0.9em;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tool-description {
+        width: 200px;
+        padding: 10px 14px;
+    }
+}
