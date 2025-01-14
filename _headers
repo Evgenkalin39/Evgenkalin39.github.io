@@ -12,3 +12,7 @@
   Content-Type: text/css; charset=utf-8
 /*
   Set-Cookie: _ga_4E406DJY5Q; SameSite=None; Secure
+# Заголовки для кук
+/*
+  Set-Cookie: _ga_4E406DJY5Q; Domain=evgenkalin39.github.io; SameSite=None; Secure
+  Set-Cookie: _ga; Domain=evgenkalin39.github.io; SameSite=None; Secure
