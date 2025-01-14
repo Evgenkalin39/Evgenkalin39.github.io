@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Cache-Control" content="max-age=31536000, public">
+
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/css; charset=utf-8">
     <meta name="description" content="Портфолио QA инженера Евгения Васильева. Опытный специалист по тестированию ПО с навыками ручного тестирования, работы с Jira, Postman, Test IT. Ищу новые проекты для сотрудничества.">
     <meta name="keywords" content="QA Engineer, тестировщик, тестирование ПО, ручное тестирование, Jira, Postman, Test IT, QA инженер портфолио">
     <meta name="author" content="Евгений Васильев">
@@ -23,17 +28,36 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Добавить в head -->
+    <!-- Предзагрузка шрифтов Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Подключение стилей Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4E406DJY5Q"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-4E406DJY5Q');
-        </script>
-        <!-- Конец Google Analytics -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
+
+    <link rel="stylesheet" href="css/font-awesome-fixes.css">
+
+    
+        <!-- Добавить в head -->
+
+
+        <!-- Google Analytics с настройками кук -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4E406DJY5Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4E406DJY5Q', {
+        cookie_flags: 'SameSite=None;Secure',
+        cookie_expires: 63072000, // 2 года в секундах
+        cookie_update: true
+      });
+    </script>
          
     <!-- Добавьте перед закрывающим тегом </head> -->
     <script type="application/ld+json">
