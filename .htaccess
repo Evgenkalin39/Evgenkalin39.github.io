@@ -1,0 +1,5 @@
+# Установка X-Content-Type-Options
+Header set X-Content-Type-Options "nosniff"
+
+# Установка Cache-Control
+Header set Cache-Control "max-age=31536000, public"
