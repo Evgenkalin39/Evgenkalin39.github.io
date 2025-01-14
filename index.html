@@ -28,37 +28,23 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Предзагрузка шрифтов Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     
-    
-    
-
-
-
-    
-    
-
-
-    
-
     
         <!-- Добавить в head -->
 
 
         <!-- Google Analytics с настройками кук -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4E406DJY5Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-4E406DJY5Q', {
-        cookie_flags: 'SameSite=None;Secure',
-        cookie_expires: 63072000, // 2 года в секундах
-        cookie_update: true
-      });
-    </script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4E406DJY5Q', {
+    cookie_domain: '.github.io',        // Изменено для корректного домена
+    cookie_flags: 'Secure;SameSite=None',
+    storage: 'none',                    // Отключаем локальное хранилище
+    client_storage: 'none'              // Отключаем клиентское хранилище
+  });
+</script>
          
     <!-- Добавьте перед закрывающим тегом </head> -->
     <script type="application/ld+json">
