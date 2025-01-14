@@ -1,0 +1,12 @@
+# Правильные MIME-типы для шрифтов
+/*.woff2
+  Content-Type: font/woff2
+
+# Правильные заголовки кэширования
+/*
+  Cache-Control: public, max-age=31536000
+  X-Content-Type-Options: nosniff
+
+# Правильный Content-Type для CSS
+/*.css
+  Content-Type: text/css; charset=utf-8
