@@ -10,3 +10,5 @@
 # Правильный Content-Type для CSS
 /*.css
   Content-Type: text/css; charset=utf-8
+/*
+  Set-Cookie: _ga_4E406DJY5Q; SameSite=None; Secure
