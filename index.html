@@ -6,6 +6,19 @@
     <meta http-equiv="Cache-Control" content="max-age=31536000, public">
 
     <meta charset="UTF-8">
+
+    <!-- Добавьте эти мета-теги для CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data: blob:; 
+      script-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://*.cloudflare.com https://*.google-analytics.com;
+      style-src 'self' https: 'unsafe-inline';
+      img-src 'self' data: https: blob:;
+      font-src 'self' data: https: https://*.cloudflare.com;
+      connect-src 'self' https: wss:;
+      media-src 'self' https:;
+      object-src 'none';
+      child-src 'self' blob: https:;
+      frame-src 'self' https:;
+      worker-src 'self' blob:;">
     <meta http-equiv="Content-Type" content="text/css; charset=utf-8">
     <meta name="description" content="Портфолио QA инженера Евгения Васильева. Опытный специалист по тестированию ПО с навыками ручного тестирования, работы с Jira, Postman, Test IT. Ищу новые проекты для сотрудничества.">
     <meta name="keywords" content="QA Engineer, тестировщик, тестирование ПО, ручное тестирование, Jira, Postman, Test IT, QA инженер портфолио">
